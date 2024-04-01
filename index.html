@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caique Nicolas</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        function salvar(){
+            let form = document.getElementById("form-cadastro")
+            let nome = form.nome.value
+            let especie = form.especie.value
+            let altura = form.altura.value
+            if (nome.trim() == ""){
+                alert("Preencha com algum Nome!")
+                return false
+            }
+            if (especie.trim() == ""){
+                alert("Preencha com alguma Especie!")
+                return false
+            }
+            if (nome.trim && especie.trim() != ""){
+                alert("Planta cadastrada com sucesso!")
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form-cadastro">
+     <div class="linha">
+            <label>Nome da planta</label>
+            <input type="text" name="nome" maxlength="48" />
+    </div>
+        <div class="linha">
+        <label>Especie</label>
+        <input type="text" name="especie" maxlength="48" />
+    </div>
+    <div class="linha">
+        <label>Altura máxima</label>
+        <input type="text" name="altura" maxlength="48" />
+    </div>
+        <input type="submit" name="enviar" value="Cadastrar" onclick="salvar()" />
+    </form>
+</body>
+</html>
